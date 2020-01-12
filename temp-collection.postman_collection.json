@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "042ae66e-869f-40ef-a86b-e62884582090",
+		"name": "temp-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://www.tut.by/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2b29f6c8-6fa4-450f-bbc0-abe7f559017f",
+						"exec": [
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});",
+							"pm.test(\"Белорусский портал TUT.BY. Новости Беларуси и мира\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.tut.by/",
+					"protocol": "https",
+					"host": [
+						"www",
+						"tut",
+						"by"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.onliner.by/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c51ecb5d-b8b8-4468-8663-3702eebb7cc2",
+						"exec": [
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});",
+							"pm.test(\"Onliner\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.onliner.by/",
+					"protocol": "https",
+					"host": [
+						"www",
+						"onliner",
+						"by"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://vk.com/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e23c7442-c621-4926-8140-5149fc53f54d",
+						"exec": [
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});",
+							"pm.test(\"Мабільная версія УКантакце\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vk.com/",
+					"protocol": "https",
+					"host": [
+						"vk",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
